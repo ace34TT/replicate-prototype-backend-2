@@ -4,17 +4,13 @@ import {
   compressImage,
   convertDataToImage,
   deleteImage,
-  fetchImage,
-  getFilePath,
 } from "../helpers/file.helper";
 import fs from "fs";
-import lodash from "lodash";
 import {
   getDocument,
   uploadFileToFirebase,
 } from "../services/firebase.service";
 import { firebaseProcess } from "../services/turfVisualizer.service";
-import sharp from "sharp";
 import { fb_tufVisualizerInstance } from "../configs/fb.turfVisualizer.config";
 import { ProcessTimer } from "../helpers/process.helper";
 export const lucataco_sdxl_handler = async (req: Request, res: Response) => {
